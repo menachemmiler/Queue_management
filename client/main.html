@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Page</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <button id="logoutId" class="english_content logout" onclick="window.location.replace('login.html')">Logout</button>
+            <button id="logoutId" class="hebrew_content logout" onclick="window.location.replace('login.html')">התנתק</button>
+            <button id="deleteUser" class="english_content" onclick="deleteUser(localStorage.getItem('userId'))">dlete acounte</button>
+            <button id="deleteUser" class="hebrew_content" onclick="deleteUser(localStorage.getItem('userId'))">למחיקת חשבון</button>
+        </div>   
+        
+      
+    
+        <span class="username">Hello <span id="usernameId"></span>!</span>
+
+        <div class="header-right">
+            <button class="lang_btn hebrew_content" onclick="toggleLanguage('english')">English</button>
+            <button class="lang_btn english_content" onclick="toggleLanguage('hebrew')">עברית</button>
+        </div>
+
+    </div>
+    <div id="header2_id" class="header2" style="display: none;">
+        <h3 class="english_content your-appointments">Appointments you have scheduled</h3>
+        <h3 class="hebrew_content your-appointments">פגישות שקבעת</h3>
+    </div>
+        <div class="intro">
+            <div id="appointmentsID" class="appointments" style="display: none;">
+
+                <ul id="list-appointments" style="padding: 0; margin: 0; list-style: none; width: 100%;"></ul>
+            </div>
+            <div class="server">
+                <div class="main">     
+                    <div class="content">
+                        
+                        <div class="selection-container">
+                            <div class="field-selection">
+                                <label class="english_content" for="specialization">Field of Specialization:</label>
+                                <label class="hebrew_content" for="specialization">תחום התמחות</label>
+                                <select id="specialization" name="specialization">
+                                    <option value="">all</option>
+                                </select>
+                                    <!-- Add more options as needed -->
+                                </input>
+                            </div>
+                    
+                            <div class="locations">
+                                <label class="english_content" for="location">Choose a Location:</label>
+                                <label class="hebrew_content" for="location">בחר מיקום</label>
+                                <select id="location" name="location">
+                                    <option class="english_content" value="">all</option>
+                                    <option class="hebrew_content" value="">הכל</option>
+                                </select>
+                                    <!-- Add more options as needed -->
+                                </input>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="english_content" id="search_button" onclick="search()">Show</button>
+                            <button class="hebrew_content" id="search_button" onclick="search()" >הצג</button>
+                        </div>
+
+                        <H4 id="h4_id"></H4>
+                        
+                        <div class="search">
+                            <input type="text" id="search" name="search" data-placeholder-english="Start typing for a doctor" data-placeholder-hebrew="הכנס שם דוקטור" onkeyup="realTimeSearch()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div id="showId" class="show" style="display: none;">
+        <ul id="list" style="padding: 0; margin: 0; list-style: none; width: 100%;"></ul>
+    </div>     
+
+    <datalist id="listMetods"></datalist>
+    <datalist id="listLocations"></datalist>
+
+    <div id="error-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="error-message"></p>
+            <button class="english_content" id="error-modal-btn" onclick="window.location.replace('login.html')">Log in</button>
+            <button class="hebrew_content" id="error-modal-btn" onclick="window.location.replace('login.html')">התחבר</button>
+        </div>
+    </div>
+    <div id="success-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="success-message" style="color: green;"></p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

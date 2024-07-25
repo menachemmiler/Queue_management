@@ -1,0 +1,376 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #573b8a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#deleteUser{
+    background: #fff;
+    color: #573b8a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 5px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.logout {
+    background: #fff;
+    color: #573b8a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+}
+
+.logout:hover {
+    background: #ddd;
+}
+
+.username {
+    font-size: 1.2em;
+    color: #fff;
+    font-size: 40px;
+    
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 25px; /* Add padding for spacing */
+}
+
+.lang_btn {
+    background: #fff;
+    color: #573b8a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+    margin-left: 10px; /* Adjust spacing between buttons if needed */
+}
+
+.lang_btn:hover {
+    background: #ddd;
+}
+
+
+.main {
+    width: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.search {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.selection-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.field-selection, .locations {
+    width: 45%;
+}
+
+label {
+    font-size: 1.2em;
+    color: #573b8a;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#search_button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d44b8;
+}
+#h4_id{
+    color: red;
+}
+
+
+
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(100%-40); /* adjust width as needed */
+    box-sizing: border-box;
+}
+
+.card-header {
+    font-size: 1.5em;
+    color: #573b8a;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 0.8em;
+    color: #25193cd1;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure elements stack vertically */
+    height: 100%; /* Make the body take full height of the card */
+}
+
+.card-method {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.button-container {
+
+    margin-top: auto; /* Push the button to the bottom */
+    text-align: center; /* Center align the button */
+}
+
+.btn-primary {
+    background-color: #573b8a;
+    color: #fff;
+    border: none;
+    width: 20%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #6d44b8;
+}
+
+
+
+.show {
+    background: linear-gradient(to bottom, #100d2cb6, #302b63bd, #24243ebb);
+    box-shadow: 5px 20px 50px #000;
+    background-color: white;
+    width: 90vw;
+    max-height: 100vh; /* מגבלה על הגובה */
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* גלילה אנכית */
+    margin-bottom: 50px;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+    list-style: none;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #573b8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #6d44b8;
+}
+
+/* hiki */
+
+.intro {
+    width: 100vw;
+    max-height: 100vh;
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    /* overflow-y: auto; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.server {
+    max-height: 100vh;
+}
+
+.appointments {
+    width: 25%;
+    max-width: 60vh;
+    min-width: 350px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    margin: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    max-height: 260px;
+    overflow-y: auto;
+
+}
+
+.appointments #p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+
+.main {
+    width: 100%;
+    max-width: 100vh;
+    /* min-width: 450px; */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+    margin: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    max-height: 100vh;
+}
+.header2{
+    display: flex;
+    margin-bottom: -3%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.your-appointments{
+    margin-right: 27vmax;
+    color: white;
+}

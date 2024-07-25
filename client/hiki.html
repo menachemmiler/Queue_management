@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Page</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <button id="logoutId" class="logout" onclick="window.location.replace('login.html')">Logout</button>
+        </div>
+        <span class="username">Hello
+             <span id="usernameId"></span>!
+        </span>
+    </div>
+        <div class="intro">
+            <div id="appointmentsID" class="appointments">
+                <ul id="list-appointments" style="padding: 0; margin: 0; list-style: none; width: 100%;"></ul>
+            </div>
+            <div class="server">
+                <div class="main">     
+                    <div class="content">
+                        <div class="search">
+                            <input type="text" id="search" name="search" placeholder="Start type for a doctor" onkeyup="realTimeSearch()">
+                        </div>
+                        <div class="selection-container">
+                            <div class="field-selection">
+                                <label for="specialization">Field of Specialization:</label>
+                                <select id="specialization" name="specialization">
+                                    <option value="">all</option>
+                                </select>
+                                    <!-- Add more options as needed -->
+                                </input>
+                            </div>
+                    
+                            <div class="locations">
+                                <label for="location">Choose a Location:</label>
+                                <select id="location" name="location">
+                                    <option value="">all</option>
+                                </select>
+                                    <!-- Add more options as needed -->
+                                </input>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="search_button">Show</button>
+                        </div>
+                        <H4 id="h4_id"></H4>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+    <div id="showId" class="show" style="display: none;">
+        <ul id="list" style="padding: 0; margin: 0; list-style: none; width: 100%;"></ul>
+    </div>     
+
+    <datalist id="listMetods"></datalist>
+    <datalist id="listLocations"></datalist>
+
+    <div id="error-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="error-message"></p>
+            <button onclick="window.location.replace('login.html')">Log in</button>
+        </div>
+    </div>
+
+</body>
+</html>

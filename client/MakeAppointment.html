@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>MakeAppointment</title>
+    <link rel="stylesheet" href="style/MakeAppointment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <button onclick="location.href = 'main.html'">Home</button>
+        <div>
+        
+          <button id="backButton">Back Month</button>
+          <button id="nextButton">Next Month</button>
+        </div>
+      </div>
+
+
+      <div id="weekdays">
+        <div >Sunday</div>
+        <div >Monday</div>
+        <div >Tuesday</div>
+        <div >Wednesday</div>
+        <div >Thursday</div>
+        <div >Friday</div>
+        <div >Saturday</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+     <div class="hours" style="display: none;">
+      <label for="hours"></label>please Choose an Hour<br><br>
+      <select id="hours" name="hours">
+          <option value="">Choose an Hour:</option>
+      </select>
+          
+          <button id="setUpBtnId" onclick="setUpAppointment()">Set up</button>
+
+  </div>
+
+    <div id="newEventModal" style="display: none;">
+      <h2>New Event</h2>
+      <label for="eventTitleInput"></label><input id="eventTitleInput" placeholder="Event Title">
+
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Cancel</button>
+    </div>
+
+    <div id="deleteEventModal" style="display: none;">
+      <h2> Event</h2>
+      <p id="eventText" ></p>
+
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+
+    <script src="js/MakeAppointment.js"></script>
+
+    <div id="error-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="error-message"></p>
+            <!-- <button onclick="window.location.replace('login.html')">Log in</button> -->
+        </div>
+    </div>
+  </body>
+</html>

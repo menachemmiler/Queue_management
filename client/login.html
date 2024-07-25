@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>log in</title>
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-right">
+            <div class="language-toggle">
+                <button class="hebrew_content lang_btn" onclick="toggleLanguage('english')">English</button>
+                <button class="english_content lang_btn" onclick="toggleLanguage('hebrew')">עברית</button>
+            </div>
+        </div>
+    </div>
+    <div class="container"></div>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">            
+            <form onsubmit="return false;">
+                <label class="flex_english_content" for="chk" aria-hidden="true">Login</label>
+                <label class="flex_hebrew_content" for="chk" aria-hidden="true">כניסה</label>
+                <div class="input-container">
+                    <input name="ID" data-placeholder-english="ID" data-placeholder-hebrew="תעודת זהות" required id="loginid">
+                    <span id="id-message" class="id-message"></span>
+                </div>
+                <input type="password" name="pswd" data-placeholder-english="Password" data-placeholder-hebrew="סיסמה" required id="passid">
+                <button class="english_content" onclick="logIn()">Login</button>
+                <button class="hebrew_content" onclick="logIn()">כניסה</button>
+            </form>
+            
+        </div>
+
+        <div class="login">
+            <form onsubmit="return false;">
+                <label class="flex_english_content" for="chk" aria-hidden="true">Sign up</label>
+                <label class="flex_hebrew_content" for="chk" aria-hidden="true">הרשמה</label>
+                <input id="newUserName" type="text" name="txt" placeholder="User name" required 
+                    data-placeholder-english="User name" data-placeholder-hebrew="שם">
+                <input id="newUserId" type="id" name="ID"  required id="signupid"
+                    data-placeholder-english="ID" data-placeholder-hebrew="תעודת זהות">
+                <input id="newUserPassword" type="password" name="pswd" required
+                    data-placeholder-english="Password" data-placeholder-hebrew="סיסמה">
+                <button class="english_content" onclick="register()">Sign up</button>
+                <button class="hebrew_content" onclick="register()">להירשם</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for error message -->
+    <div id="error-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="error-message"></p>
+            <button class="english_content" onclick="closeModal()">I understand!</button>
+            <button class="hebrew_content" onclick="closeModal()">הבנתי</button>
+        </div>
+    </div>
+
+    <!-- Modal for success message -->
+    <div id="success-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p id="success-message"></p>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
